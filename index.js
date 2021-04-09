@@ -1,14 +1,14 @@
-let year = prompt("nhập năm ktra");
-if (year%4==0) {
-    if (year%100==0) {
-        if (year%400==0) {
-            alert(year + " Là năm nhuận ");
-        } else {
-            alert(year + " Không phải năm nhuận ");
-        }
-    } else {
-        alert(year + " Là năm nhuận ");
-    }
-} else {
-    alert(year + " Không phải năm nhuận ");
+let imgObj = null;
+imgObj = document.getElementById("myImage");
+function init() {
+    imgObj = document.getElementById('myImage');
+    imgObj.style.position = 'relative';
+    imgObj.style.left = '0px';
 }
+function moveRight() {
+    imgObj.style.left = parseInt(imgObj.style.left) + 10 + 'px';
+}
+function moveLeft() {
+    imgObj.style.left = parseInt(imgObj.style.left) - 10 + 'px';
+}
+window.onload = init;
